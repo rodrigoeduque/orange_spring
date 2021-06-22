@@ -11,15 +11,17 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private String email;
     private Integer idade;
 
     public Aluno() {
     }
 
-    public Aluno(Long id, String nome, Integer idade) {
+    public Aluno(Long id, String nome, String email, Integer idade) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
+        this.email = email;
     }
 
     public Long getId() {
@@ -44,5 +46,13 @@ public class Aluno {
 
     public void setIdade(Integer idade) {
         this.idade = idade;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
